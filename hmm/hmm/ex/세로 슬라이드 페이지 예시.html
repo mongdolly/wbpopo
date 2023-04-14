@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            overflow: hidden;
+        }
+
+        html,
+        body {
+            width: 100vw;
+            /* height: 100vh; */
+        }
+
+        .content {
+            width: 100vw;
+            height: 100vh;
+            background-color: blueviolet;
+
+            position: relative;
+        }
+
+        .content>h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            font-size: 20em;
+            font-weight: bold;
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+
+        }
+
+        /* .content:nth-child(even) {
+            background-color: #333;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>1</h1>
+    </div>
+    <div class="content">
+        <h1>2</h1>
+    </div>
+    <div class="content">
+        <h1>3</h1>
+    </div>
+    <div class="content">
+        <h1>4</h1>
+    </div>
+    <div class="content">
+        <h1>5</h1>
+    </div>
+    <div class="content">
+        <h1>6</h1>
+    </div>
+    <div class="content">
+        <h1>7</h1>
+    </div>
+</body>
+<script>
+    window.addEventListener("wheel", function (e) {
+        e.preventDefault();
+    }, { passive: false });
+
+    var $html = $("html");
+
+    var page = 1;
+
+    var lastPage = $(".section").length;
+
+    $html.animate({ scrollTop: 0 }, 10);
+    
+    $(window).on("wheel", function (e) {
+
+        if ($html.is(":animated")) return;
+
+        if (e.originalEvent.deltaY > 0) {
+            if (page == lastPage) return;
+
+            page++;
+        } else if (e.originalEvent.deltaY < 0) {
+            if (page == 1) return;
+
+            page--;
+        }
+        var posTop = (page - 1) * $(window).height();
+
+        $html.animate({ scrollTop: posTop },500);
+
+        console.log(page,lastPage);
+
+    });
+
+</script>
+
+</html>

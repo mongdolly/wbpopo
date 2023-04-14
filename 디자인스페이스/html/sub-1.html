@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>designspace</title>
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../css/sub-1.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+</head>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/sub-1.js"></script>
+<script src="https://kit.fontawesome.com/3f286251e2.js" crossorigin="anonymous"></script>
+
+<body>
+    <!-- MENU -->
+    <header>
+        <nav>
+            <a href="main.html" class="headerlogo"><img src="../images/logo.png" alt=""></a>
+            <ul class="menu">
+                <li><a href="./sub-2.html">SOFA</a></li>
+                <li><a href="#">CHAIR</a></li>
+                <li><a href="#">TABLE</a></li>
+                <li><a href="#">INDUCSTRATE</a></li>
+                <li><a href="#">ACCESSORIES</a></li>
+                <li><a href="#">STORAGY</a></li>
+                <li><a href="#">OUTDOOR</a></li>
+            </ul>
+            <ul class="logo">
+                <li><a href="#"><img src="../images/search.png" alt=""></a></li>
+                <li><a href="#"><img src="../images/mypage.png" alt=""></a></li>
+                <li><a href="#"><img src="../images/my cart.png" alt=""></a></li>
+                <!-- <li><a href="#"><img src="../images/back.png" alt=""></a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <div class="left">
+            <ul>
+                <li>
+                    <h2>SOFA</h2>
+                </li>
+                <li><a href="#">SINGLE(235)</a></li>
+                <li><a href="#">DOUBLE(82)</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="menu-tag">
+                <a href="#">HOME</a> <span>></span> <a href="#">SOFA</a>
+            </div>
+            <div class="info-1">
+                <div class="right">
+                    <img src="../images/sub-1/item1.png" alt="item1.png">
+                    <img src="../images/sub-1/item1-1.png" alt="item1-1.png">
+                </div>
+                <div class="left">
+                    <h6>SINGLE</h6>
+                    <h2>릴리안 싱글 소파</h2>
+                    <p>
+                        <span><img src="../images/sub-1/star-solid.png" alt="star-solid.png"></span>
+                        <span><img src="../images/sub-1/star-solid.png" alt="star-solid.png"></span>
+                        <span><img src="../images/sub-1/star-solid.png" alt="star-solid.png"></span>
+                        <span><img src="../images/sub-1/star-solid.png" alt="star-solid.png"></span>
+                        <span><img src="../images/sub-1/star-solid2.png" alt="star-solid2.png"></span>
+                        15개의 리뷰
+                    </p>
+                    <div class="color">
+                        <button class="select-1"><!--color circle--></button>
+                        <button class="select-2"></button>
+                    </div>
+                    <div class="info01">
+                        <p>상품별 요약설명에 작성한 글이 표시가 됩니다.</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>HEIGH</td>
+                                    <td>WIDTH</td>
+                                </tr>
+                                <tr>
+                                    <th>52<span>cm</span></th>
+                                    <th>48<span>cm</span></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="count">
+                            <!-- <label for="">number</label> -->
+                            <button onclick="count('plus')"><i class="fa-solid fa-plus"></i></button>
+                            <div id="result">0</div>
+                            <button onclick="count('minus')"><i class="fa-solid fa-minus"></i></button>
+                        </div>
+                        <script>
+                            function count(type) {
+                                const resultElement = document.getElementById('result');
+
+                                let number = resultElement.innerText;
+
+                                if (type === 'plus') {
+                                    number = parseInt(number) + 1;
+                                } else if (type === 'minus') {
+                                    number = parseInt(number) - 1;
+                                }
+                                if (number <= -1) {
+                                    if (type === 'minus') return;
+                                }
+
+                                resultElement.innerText = number;
+                            }
+                        </script>
+                        <div class="ch-btn">
+                            <button>ADD TO CART</button>
+                            <button>BUY IT NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-2">
+                <ul class="menubar">
+                    <li class="on">DETAILE</li>
+                    <li>INFORMATION</li>
+                    <li>Q&A</li>
+                </ul>
+                <div class="menu">
+                    <div class="side01">
+                        <p>
+                            안정감이 느껴지는 릴리안 싱글소파입니다. <br>
+                            편안하게 안착가능하며 심플한 디자인이 멋스러움을 더해줍니다.
+                        </p>
+                    </div>
+                    <div class="side02">
+                        <p>아직 정보가 없습니다.</p>
+                    </div>
+                    <div class="side03">
+                        <p>
+                            아직 정보가 없습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="info-3">
+                <h2>관련상품 </h2>
+                <ul>
+                    <li><span><a href="#"><i class="fa-regular fa-heart"></i></a></span><a href="#"><img src="../images/sub-1/item2-1.png" alt="item2-1.png">
+                            <p>허븐디 릴리 소파</p>
+                        </a></li>
+                    <li><span><a href="#"><i class="fa-regular fa-heart"></i></a></span><a href="#"><img src="../images/sub-1/item2-2.png" alt="item2-2.png">
+                            <p>트리니 더블 소파</p>
+                        </a></li>
+                    <li><span><a href="#"><i class="fa-regular fa-heart"></i></a></span><a href="#"><img src="../images/sub-1/item2-3.png" alt="item2-3.png">
+                            <p>이핀 더블 소파</p>
+                        </a></li>
+                    <li><span><a href="#"><i class="fa-regular fa-heart"></i></a></span><a href="#"><img src="../images/sub-1/item2-4.png" alt="item2-4.png">
+                            <p>위즈 라운드 테이블</p>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="top">
+                <h2>talk about we are</h2><img src="../images/footerlogo.png" alt="">
+            </div>
+            <div class="mid">
+                <h2>02-2237-4280</h2>
+            </div>
+            <div class="btn">
+                <ul class="btn1">
+                    <li>COMPANY INFO</li>
+                    <li>디자인 스페이스</li>
+                    <li>대표:강남규 <span>사업자등록번호: 201-11-34171</span></li>
+                    <li>통신판매업신고번호 : 제2017-서울중구-0207호</li>
+                    <li>개인정보담당자 : 강남규 <span>이메일 : gugu824@gmail.com</span></li>
+                    <li>주소: 서울특별시 중구 퇴계로 83길 26(황학동)</li>
+                </ul>
+                <ul class="btn2">
+                    <li>BANK INFO</li>
+                    <li>기업은행</li>
+                    <li>010 4483 9919</li>
+                    <li>예금주 : 강남규</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

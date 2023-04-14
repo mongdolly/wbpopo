@@ -1,0 +1,231 @@
+@media screen and (max-width:768px) {
+    .move {
+        right: 0%;
+      }
+    
+      .m-page {
+        display: block;
+        text-align: center;
+        padding: 50% 0;
+      }
+    
+      .m-page li a {
+        display: block;
+        margin-top: 30px;
+        width: 100%;
+        font-size: 20px;
+        color: #707070;
+        font-family: 'Raleway', sans-serif;
+      }
+    
+      .m-menu {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 99;
+      }
+    
+      .m-menu span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #707070;
+        border-radius: 30px;
+        transition: all 0.5s;
+      }
+      .top {
+        top: 0;
+      }
+    
+      .mid {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    
+      .btn {
+        bottom: 0;
+      }
+      .move1 .top{
+        opacity: 0;
+      }
+      .move1 .btn{
+        opacity: 0;
+      }
+      .move1 .m1  {
+        transform: rotate(45deg);
+        background-color: #EE2E30;
+      }
+    
+      .move1 .m2  {
+        transform: rotate(-45deg);
+      }
+
+
+
+
+    .menu{
+        display: none;
+      }
+      header nav{
+          height: 74px;
+        padding-top: 20px;
+      }
+      .logo{
+        width: 80px;
+      }
+      .bg_title {
+        top: 20vh;
+      }
+      .s1 .bg_title h2 {
+        font-size: 30px;
+        line-height: 48px;
+      }
+      .title_box1 br{ display: none;}
+      .main_bg{
+        background: url(../images/sub-2images/m_mainbg.jpg) no-repeat;
+        background-size: cover;
+        padding-top: 80px;
+      }
+      .main_title h2,.title_box1 h2{
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .main_title p{
+        /* margin-top: 10px; */
+        /* font-size: 14px;
+        line-height: 24px;
+        font-family: 'Noto Sans KR', sans-serif; */
+        display: none;
+    }
+    .title_box1 p{
+        font-size: 14px;
+        line-height: 24px;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    /* s1 */
+    .s1{
+        padding-bottom: 80px;
+    }
+    .section_title{ 
+        flex-wrap: wrap;
+    }
+    .title_box1{
+        width: 100%;
+    }
+    .title_box_logo{
+        margin-top: 30px;
+        width: 100%;
+    }
+    .title_box_logo img{
+        width: 80%;
+        float: none;
+        margin: 0 auto;
+    }
+    .contents_box{
+        flex-wrap: wrap;
+    }
+    .content{
+        justify-content: space-between;
+    }
+    .right{
+        margin-top: 30px;
+    }
+    .block1,.block2{
+        width: 50px;
+        height: 50px;
+    }
+    .info{
+        width: 80%;
+        height: 50px;
+    }
+    .info li:not(:first-child){
+        margin-top: 5px;
+        font-size: 8px;
+    }
+    .left .top, .right .top{
+        font-size: 12px;
+    }
+    /* s2 */
+    .s2 .inner{
+        flex-wrap: wrap;
+    }
+    .s2 .title_box1{
+        width: 100%;
+        height: 50%;
+    }
+    
+    .section_contents{
+        width: 100%;
+        height: auto;
+    }
+    .section_contents li{
+        line-height: 20px;
+    font-size: 14px;
+    }
+    .section_contents li br{
+        display: none;
+    }
+    .section_contents li span{
+        margin-left: 10px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+    /* s3 */
+    .title_box_item{
+        width: 100%;
+        height: 50%;
+        margin-bottom: 30px;
+    }
+    .title_box_item img{
+        max-width: 100%;
+    }
+    .s3 .title_box1>a{
+        text-align: center;
+        padding: 10px 0;
+    border: 1px solid #fff;
+    }
+    
+    
+    /* footer */
+  footer .inner{
+    overflow: visible;
+  }
+  .ftmenu {
+    display: none;
+  }
+
+  .ftbtm {
+    margin-top: 0px;
+    display: block;
+  }
+
+  .ftmenu2 {
+    width: 100%;
+    margin-top: 0px;
+    flex-wrap: wrap;
+  }
+  .ftmenu2 li{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .ftmenu2 li:first-child>a,
+  .ftmenu2 li>a{
+    color: #e9e9e9;
+  }
+
+
+  .snsbox {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-around;
+  }
+
+  .snsbox img {
+    /* width: 60%; */
+  }
+}

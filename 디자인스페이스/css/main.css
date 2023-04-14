@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2? family= Quicksand:wght@300;400;500;600;700 & display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+ul,li{
+    list-style: none;
+}
+/* img{
+    display: block;
+} */
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #FCFBFB;
+}
+.topbtn{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 700px;
+    right: 100px;
+    z-index: 99;
+    border: none;
+    background-color: rgba(252, 251, 251, 0.8);
+    border: 3px solid #707070;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.topbtn:active{
+    background-color: #9E9EEF;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(252, 251, 251, 0.8);
+}
+.fix{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+}
+nav{
+    width: 1380px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    box-sizing: border-box;
+}
+header .menu, .logo{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+header .menu li:not(:last-child){
+    padding-right: 60px;
+    text-align: center;
+}
+.logo li:not(:last-child){
+    padding-right: 30px;
+    text-align: center;
+}
+header .menu li a{
+        font-family: 'Quicksand', 산세리프;
+    color: #707070;
+}
+/* slidecontainer */
+.slidecontainer{
+    width: 100%;
+    height: 860px;
+    overflow: hidden;
+}
+.slidelist{
+    width: 5760px;
+    height: 860px;
+    position: relative;
+}
+.slide{
+    float: left;
+    width: 1920px;
+    height: 860px;
+}
+
+.sec01,.sec02,.sec03,.sec05,.sec06,.sec07{
+    width: 1380px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 160px;
+    /* text-align: center; */
+}
+
+.sec03{margin-bottom: 160px;}
+/* sec01 */
+
+.sec01 .txt, .sec03 .txt, .sec05 .txt, .sec07 .txt{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.sec01 .txt h2, .sec03 .txt h2,.sec05 .txt h2{
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', 산세리프;
+    color: #707070;
+}
+.sec07 .txt h2{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', 산세리프;
+    color: #707070;
+}
+.sec07 .txt img{
+    margin-right: 10px;
+}
+.sec01 p,.sec03 p,.sec05 .txt p{
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Quicksand', 산세리프;
+    color: #707070;
+}
+.sec07 .txt p{
+    font-size: 24px;
+    font-weight: normal;
+    font-family: 'Quicksand', 산세리프;
+    color: #707070;
+}
+.sec07item img{
+    display: block;
+}
+.sec07item li{
+    cursor: pointer;
+}
+
+.sec01item, .sec03item,.sec05item,.sec07item{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.sec05{
+    margin-bottom: 160px;
+}
+.sec05item{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sec05item li:nth-child(1),
+.sec05item li:nth-child(2),
+.sec05item li:nth-child(3),
+.sec05item li:nth-child(4){
+    margin-bottom: 60px;
+}
+
+.sec01item h3, .sec03item h3,.sec05item h3{
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-family: 'NanumSquare';
+    color: #707070;
+}
+.sec01item p, .sec03item p, .sec05item p{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'NanumSquareBold';
+    color: #707070;
+}
+.sec01item .best,
+.sec05item .best,
+.sec03item .best{
+    width: 327px;
+    height: 359px;
+    background-color: #F3F2F2;
+    border-radius: 10px;
+    position: relative;
+}
+.sec01item .best img,
+.sec05item .best img,
+.sec03item .best img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.sec05item li:nth-child(2) .best img{
+    width: 150px;
+}
+.sec01 button, .sec03 button, .sec05 button{
+    display: block;
+    width: 120px;
+    height: 50px;
+    margin: auto;
+    margin-top: 60px;
+    font-family: 'Quicksand', 산세리프;
+    color: #707070;
+    border: 1px solid #707070;
+    background-color: #FCFBFB;
+    cursor: pointer;
+}
+.sec01 button:hover, .sec03 button:hover, .sec05 button:hover{
+    background-color: #F3F3FF;
+}
+
+/* sec02 */
+.box1-1,.box1-2,.box2-1,.box2-2,.box2-3{
+    background-color: #F3F2F2;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'Quicksand', 산세리프;
+}
+
+
+
+.box1,.box2{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.box1-1{
+    display: block;
+    width: 795px;
+    height: 350px;
+    background-image: url(../images/sofa.png);
+    position: relative;
+    margin-right: 25px;
+}
+
+.box1-1 h2{
+position: absolute;
+top: 17%;
+    right: 5%;
+transform: translate(-50%);
+color: #333;
+}
+.box1-2{
+    width: 560px;
+    height: 350px;
+    background-image: url(../images/storage.png);
+    position: relative;
+}
+
+.box1-2 h2{
+position: absolute;
+top: 46%;
+    left: 23%;
+transform: translate(-50%);
+color: #333;
+}
+.box2{
+    margin-top: 25px;
+}
+.box2-1{
+    width: 327px;
+    height: 350px;
+    background-image: url(../images/chair.png);
+    position: relative;
+    margin-right: 25px;
+}
+.box2-1 h2{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+color: #333;
+    }
+.box2-2{
+    width: 327px;
+    height: 350px;
+    background-image: url(../images/lamp.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: 25px;
+}
+.box2-2 h2{
+    position: absolute;
+     top: 12%;
+    right: 10%;
+    color: #333;
+    }
+.box2-3{
+    width: 680px;
+    height: 350px;
+    background-image: url(../images/table.png) ;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.box2-3 h2{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+ color: #333;
+    }
+
+.sec04{
+    width: 100%;
+    height: 550px;
+    background-image: url(../images/mid-banner.jpg) ;
+    /* background-size: cover; */
+}
+
+.sec06{
+    width: 100%;
+    height: 545px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sec06 .t-box .btn{
+    position: absolute;
+    left: 270px;
+    bottom: 0;
+}
+.sec06 .t-box .btn button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.sec06 .t-box .btn button:last-child{
+    margin-left: 30px;
+}
+.sec06 .right{
+    position: relative;
+    float: right;
+}
+.sec06 .deco{
+
+}
+.on{
+    transition-duration: all 0.5s;
+    z-index: 98;
+}
+.sec06 .deco .item01, 
+.sec06 .deco .item02, 
+.sec06 .deco .item03 {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.sec07{
+    margin-bottom: 160px;
+} 
+
+footer{
+    width: 100%;
+    height: 500px;
+    background-color: #f3f2f2;
+}
+.inner{
+    width: 1380px;
+    margin: auto;
+    padding: 30px;
+}
+.inner .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.inner .top h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #6f6f6f;
+    font-family: 'Quicksand', 산세리프;
+}
+.inner .mid{
+    margin-bottom: 30px;
+}
+.inner .mid h2{
+    font-size: 45px;
+    font-weight: bold;
+    color: #6f6f6f;
+    font-family: 'Quicksand', 산세리프;
+}
+.btn{
+    display: flex;
+}
+.btn1{
+    width: 444px;
+    margin-right: 30px;
+}
+.inner .btn1,
+.inner .btn2{
+    color: #6f6f6f;
+}
+.inner .btn1 li:nth-child(5) a{
+    color: #6f6f6f;
+}
+.inner .btn li{
+    padding: 5px 0;
+}
+.inner .btn1 li:first-child,
+.inner .btn2 li:first-child,
+.inner .btn2 li:nth-child(2){
+    font-size: 14px;
+    font-weight: 700;
+}
+.inner .btn1 li:nth-child(2),
+.inner .btn2 li:nth-child(3){
+    font-size: 18px;
+    font-weight: bold;
+}
+.inner .btn2 li:last-child{
+    font-size: 16px;
+    font-weight: bold;
+}
+.inner .btn1 li:nth-child(3),
+.inner .btn1 li:nth-child(4),
+.inner .btn1 li:nth-child(5),
+.inner .btn1 li:nth-child(6){
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'NanumSquareLight';
+}
+.inner .btn1 span{
+    margin-left: 60px;
+}
+.inner .btn1 li:first-child,
+.inner .btn1 li:nth-child(5) a,
+.inner .btn2 li:first-child,
+.inner .btn2 li:nth-child(3)
+{
+    font-family: 'Quicksand', 산세리프;
+}
+.inner .btn2 li:last-child{
+    font-family: 'NanumSquareBold';
+}
+.inner .btn2 li:nth-child(2){
+    font-family: 'NanumSquare';
+}

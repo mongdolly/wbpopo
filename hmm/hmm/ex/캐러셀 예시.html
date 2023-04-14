@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .containerswiper {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* width: 300vw; */
+      height: 100vh;
+      overflow: hidden;
+      background-color: #0C205C;
+    }
+
+    .container.animated {
+      transition: 0.5s ease-out;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      /* overflow: hidden; */
+      position: relative;
+      float: left;
+    }
+
+    .s1 {
+      background-color: aliceblue;
+    }
+
+    .s2 {
+      background-color: red;
+    }
+
+    .s3 {
+      background-color: aqua;
+    } */
+
+    .slide h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 200px;
+    }
+
+    .prev {
+      position: absolute;
+      display: block;
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      cursor: pointer;
+    }
+
+    .next {
+      position: absolute;
+      display: block;
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+      cursor: pointer;
+    }
+  </style>
+  <script src="./jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div class="containerswiper">
+    <div class="container">
+      <div class="slide s1">
+        <h2>1</h2>
+      </div>
+      <div class="slide s2">
+        <h2>2</h2>
+      </div>
+      <div class="slide s3">
+        <h2>3</h2>
+      </div>
+    </div>
+  </div>
+  <button class="prev">prev</button>
+  <button class="next">next</button>
+
+  <script>
+    let slides = document.querySelector('.container'),
+      slide = document.querySelectorAll('.slide'),
+      currentIdx = 0,
+      slideCount = slide.length,
+      slideWidth = 100,
+      prevBtn = document.querySelector('.prev'),
+      nextBtn = document.querySelector('.next');
+
+
+    makeClone();
+
+    function makeClone() {
+      for (let i = 0; i < slideCount; i++) {
+        // a.cloneNode() ,a.cloneNode(true)
+        //  a를 복사  / a의 내용까지 복사
+        let cloneSlide = slide[i].cloneNode(true);
+        cloneSlide.classList.add('clone');
+        // a,cloneNode(b)
+        // a뒤에 b를 복사붙여넣기
+        slides.appendChild(cloneSlide);
+      }
+
+      for (let i = slideCount - 1; i >= 0; i--) {
+        // a.cloneNode() ,a.cloneNode(true)
+        //  a를 복사  / a의 내용까지 복사
+        let cloneSlide = slide[i].cloneNode(true);
+        cloneSlide.classList.add('clone');
+        // a.prepend(b)
+        // a앞에 b를 복사붙여넣기
+        slides.prepend(cloneSlide);
+      }
+      updatewidth();
+      setInitialPos();
+
+      setTimeout(function () {
+        slides.classList.add('animated');
+      }, 100);
+    }
+    function updatewidth() {
+      let currentslides = document.querySelectorAll('.slide');
+      let newSlideCount = currentslides.length;
+
+      let newwidth = (slideWidth * newSlideCount) + 'vw';
+      slides.style.width = newwidth;
+    }
+    function setInitialPos() {
+      let initialtranslateValue = -(slideWidth) * slideCount;
+      slides.style.transform = 'translate(' + initialtranslateValue + 'vw)';
+    }
+    nextBtn.addEventListener('click', function () {
+      moveSlide(currentIdx + 1);
+    })
+    prevBtn.addEventListener('click', function () {
+      moveSlide(currentIdx - 1);
+    })
+    function moveSlide(num) {
+      slides.style.left = -num * (slideWidth) + 'vw';
+      currentIdx = num;
+      console.log(currentIdx, slideCount);
+
+      // 뷰위치 돌려놓기
+      if (currentIdx == slideCount) {
+
+        setTimeout(function () {
+          slides.classList.remove('animated');
+          slides.style.left = '0vw';
+          currentIdx = 0;
+        }, 500);
+        setTimeout(function () {
+          slides.classList.add('animated')
+        }, 600)
+      } else if (-currentIdx == slideCount) {
+        setTimeout(function () {
+          slides.classList.remove('animated');
+          slides.style.left = '0vw';
+          currentIdx = 0;
+        }, 500);
+        setTimeout(function () {
+          slides.classList.add('animated')
+        }, 600)
+      }
+
+    }
+
+
+
+  </script>
+</body>
+
+</html>

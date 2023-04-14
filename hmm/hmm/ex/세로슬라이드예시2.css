@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{overflow: hidden;}
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+}
+.slidebox{
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    position: relative;
+}
+.slidebox>h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 10em;
+    font-weight: bold;
+}
